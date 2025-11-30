@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <title>Homepage Wireframe</title><!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script><!-- Canva SDKs -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+      body {
+        box-sizing: border-box;
+      }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full w-full m-0 p-0">
+  <header class="w-full h-full">
+   <div id="app-root" class="app-wrapper w-full h-full min-h-full bg-[#ba0c2f] flex items-center justify-center">
+    <main class="main-content w-full max-w-5xl mx-auto bg-[#f8f3f4] rounded-xl shadow-lg border border-[#ba0c2f] px-6 py-6 flex flex-col gap-4" aria-label="Homepage wireframe"><!-- PAGE TITLE -->
+     <section class="w-full" aria-label="Wireframe title section">
+      <h1 id="wireframe-title" class="text-center font-bold tracking-wider text-[#1a1a1a]" style="font-family: 'Georgia', 'Times New Roman', serif; font-size: 24px; letter-spacing: 0.15em;">CARDINAL BOOKSTORE</h1>
+      <p id="wireframe-subtitle" class="text-center text-xs text-[#4a4a4a] mt-1"><span id="page-indicator">Home Page</span> - Basic low-fidelity layout with clearly labeled sections</p>
+     </section><!-- HEADER -->
+     <section class="w-full border border-dashed border-[#ba0c2f] rounded-md bg-white px-4 py-3 flex flex-col gap-3" aria-label="Header section">
+      <div class="flex items-center justify-between gap-4">
+       <div class="flex items-center gap-3">
+        <h1 style="font-family: 'Georgia', 'Palatino', 'Times New Roman', serif; font-size: 36px; font-weight: bold; color: #ba0c2f; letter-spacing: 0.05em; margin: 0;">Cardinal Books</h1>
+       </div>
+       <div class="flex items-center gap-2">
+        <div class="flex items-center justify-center border border-[#ba0c2f] border-dashed rounded-sm px-3 py-1"><span class="text-[10px] text-[#4a4a4a]">Search / Utility</span>
+        </div>
+       </div>
+      </div>
+     </section><!-- NAVIGATION BAR -->
+     <nav class="w-full border border-dashed border-[#ba0c2f] rounded-md bg-white px-4 py-3 flex flex-col gap-2" aria-label="Navigation bar"><span id="nav-label" class="text-[10px] font-semibold uppercase tracking-wide text-[#1a1a1a]">NAVIGATION</span>
+      <div class="grid grid-cols-3 gap-2"><button id="nav-home" class="bg-[#ba0c2f] rounded-sm px-2 py-2 text-[10px] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#ba0c2f] focus-visible:ring-offset-white hover:bg-[#9a0a27] transition-colors" type="button" onclick="showPage('home')"> Home </button> <button id="nav-content" class="bg-[#ba0c2f] rounded-sm px-2 py-2 text-[10px] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#ba0c2f] focus-visible:ring-offset-white hover:bg-[#9a0a27] transition-colors" type="button" onclick="showPage('course-materials')"> Course Materials </button> <button id="nav-about" class="bg-[#ba0c2f] rounded-sm px-2 py-2 text-[10px] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#ba0c2f] focus-visible:ring-offset-white hover:bg-[#9a0a27] transition-colors" type="button" onclick="showPage('about')"> About </button>
+      </div>
+     </nav><!-- ========================================== --> <!-- HOME PAGE CONTENT - START --> <!-- ========================================== -->
+     <div id="home-page" class="page-content"><!-- HERO SECTION -->
+      <section class="w-full border border-dashed border-[#ba0c2f] rounded-md bg-white px-4 py-3 flex flex-col gap-3" aria-label="Hero image section"><span id="hero-label" class="text-[10px] font-semibold uppercase tracking-wide text-[#1a1a1a]">HERO IMAGE</span>
+       <div id="home-hero-container" class="w-full border border-dashed border-[#ba0c2f] rounded-md bg-[#f8f3f4] flex flex-col items-center justify-center gap-1 py-6 relative overflow-hidden"><!-- Default Bookstore SVG Illustration -->
+        <svg id="default-home-svg" width="100%" height="200" viewbox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full"><!-- Bookstore Building --> <rect x="200" y="60" width="400" height="120" fill="#BA0C2F" stroke="#8A0A22" stroke-width="2" /> <!-- Roof --> <path d="M180 60 L400 20 L620 60 Z" fill="#8A0A22" /> <!-- Door --> <rect x="370" y="120" width="60" height="60" fill="#FFFFFF" stroke="#BA0C2F" stroke-width="2" /> <circle cx="420" cy="150" r="3" fill="#BA0C2F" /> <!-- Windows --> <rect x="240" y="80" width="50" height="40" fill="#FFFFFF" stroke="#8A0A22" stroke-width="2" /> <rect x="310" y="80" width="50" height="40" fill="#FFFFFF" stroke="#8A0A22" stroke-width="2" /> <rect x="440" y="80" width="50" height="40" fill="#FFFFFF" stroke="#8A0A22" stroke-width="2" /> <rect x="510" y="80" width="50" height="40" fill="#FFFFFF" stroke="#8A0A22" stroke-width="2" /> <!-- Window panes --> <line x1="265" y1="80" x2="265" y2="120" stroke="#BA0C2F" stroke-width="1" /> <line x1="240" y1="100" x2="290" y2="100" stroke="#BA0C2F" stroke-width="1" /> <line x1="335" y1="80" x2="335" y2="120" stroke="#BA0C2F" stroke-width="1" /> <line x1="310" y1="100" x2="360" y2="100" stroke="#BA0C2F" stroke-width="1" /> <line x1="465" y1="80" x2="465" y2="120" stroke="#BA0C2F" stroke-width="1" /> <line x1="440" y1="100" x2="490" y2="100" stroke="#BA0C2F" stroke-width="1" /> <line x1="535" y1="80" x2="535" y2="120" stroke="#BA0C2F" stroke-width="1" /> <line x1="510" y1="100" x2="560" y2="100" stroke="#BA0C2F" stroke-width="1" /> <!-- Sign --> <rect x="300" y="30" width="200" height="25" fill="#FFFFFF" stroke="#BA0C2F" stroke-width="2" rx="3" /> <text x="400" y="47" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#BA0C2F" text-anchor="middle">
+          CARDINAL BOOKSTORE
+         </text> <!-- Books in window display --> <rect x="245" y="95" width="8" height="20" fill="#BA0C2F" /> <rect x="255" y="90" width="8" height="25" fill="#8A0A22" /> <rect x="265" y="92" width="8" height="23" fill="#BA0C2F" /> <rect x="445" y="95" width="8" height="20" fill="#BA0C2F" /> <rect x="455" y="90" width="8" height="25" fill="#8A0A22" /> <rect x="465" y="92" width="8" height="23" fill="#BA0C2F" /> <!-- Awning --> <rect x="360" y="115" width="80" height="5" fill="#8A0A22" /> <path d="M360 115 L355 120 L365 120 Z" fill="#8A0A22" /> <path d="M380 115 L375 120 L385 120 Z" fill="#8A0A22" /> <path d="M400 115 L395 120 L405 120 Z" fill="#8A0A22" /> <path d="M420 115 L415 120 L425 120 Z" fill="#8A0A22" /> <path d="M440 115 L435 120 L445 120 Z" fill="#8A0A22" />
+        </svg><!-- Custom Image (hidden by default) --> <img id="custom-home-image" alt="Bookstore interior with books" style="display: none; width: 100%; height: 200px; object-fit: cover; border-radius: 4px;" onerror="this.style.display='none'; document.getElementById('default-home-svg').style.display='block'; document.getElementById('home-image-caption').textContent='Cardinal Bookstore - Your Campus Resource';"> <span id="home-image-caption" class="text-[10px] text-[#4a4a4a] mt-2">Cardinal Bookstore - Your Campus Resource</span>
+       </div>
+       <div class="flex flex-col gap-1">
+        <div class="h-2 w-3/4 border border-dashed border-[#ba0c2f] rounded-sm"></div>
+        <div class="h-2 w-1/2 border border-dashed border-[#ba0c2f] rounded-sm"></div>
+       </div>
+      </section><!-- CONTENT BLOCKS -->
+      <section class="w-full border border-dashed border-[#ba0c2f] rounded-md bg-white px-4 py-3 flex flex-col gap-3" aria-label="Content blocks section">
+       <div class="flex items-center justify-between"><span id="content-label" class="text-[10px] font-semibold uppercase tracking-wide text-[#1a1a1a]">CONTENT BLOCKS (3)</span> <span class="text-[10px] text-[#4a4a4a]"> Product Categories </span>
+       </div>
+       <div class="grid grid-cols-1 md:grid-cols-3 gap-3"><!-- Block 1 - Course Materials -->
+        <article class="border border-dashed border-[#ba0c2f] rounded-md px-4 py-4 flex flex-col gap-2 bg-[#f8f3f4] cursor-pointer hover:bg-[#ede3e5] transition-colors" onclick="showPage('course-materials')" role="button" tabindex="0" onkeypress="if(event.key === 'Enter') showPage('course-materials')">
+         <div class="text-3xl mb-1">
+          📚
+         </div>
+         <h3 class="text-sm font-bold text-[#ba0c2f]">Course Materials</h3>
+         <p class="text-xs text-[#4a4a4a]">Textbooks, digital codes, and supplies</p>
+        </article><!-- Block 2 - Ball State Apparel -->
+        <article class="border border-dashed border-[#ba0c2f] rounded-md px-4 py-4 flex flex-col gap-2 bg-[#f8f3f4] cursor-pointer hover:bg-[#ede3e5] transition-colors" onclick="showPage('course-materials')" role="button" tabindex="0" onkeypress="if(event.key === 'Enter') showPage('course-materials')">
+         <div class="text-3xl mb-1">
+          👕
+         </div>
+         <h3 class="text-sm font-bold text-[#ba0c2f]">Ball State Apparel</h3>
+         <p class="text-xs text-[#4a4a4a]">Clothing, accessories, and Cardinal pride gear</p>
+        </article><!-- Block 3 - Technology -->
+        <article class="border border-dashed border-[#ba0c2f] rounded-md px-4 py-4 flex flex-col gap-2 bg-[#f8f3f4] cursor-pointer hover:bg-[#ede3e5] transition-colors" onclick="showPage('course-materials')" role="button" tabindex="0" onkeypress="if(event.key === 'Enter') showPage('course-materials')">
+         <div class="text-3xl mb-1">
+          💻
+         </div>
+         <h3 class="text-sm font-bold text-[#ba0c2f]">Technology</h3>
+         <p class="text-xs text-[#4a4a4a]">Laptops, tablets, and software</p>
+        </article>
+       </div>
+      </section>
+     </div><!-- ========================================== --> <!-- HOME PAGE CONTENT - END --> <!-- ========================================== --> <!-- ========================================== --> <!-- COURSE MATERIALS PAGE CONTENT - START --> <!-- ========================================== -->
+    
