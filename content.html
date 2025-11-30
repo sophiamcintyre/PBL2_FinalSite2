@@ -99,3 +99,213 @@
       </section>
      </div>ent('script');d.innerHTML="window.__CF$cv$params={r:'9a668787a7e575e4',t:'MTc2NDQ2NTcwMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+     <footer class="w-full border border-dashed border-[#ba0c2f] rounded-md bg-white px-4 py-3 flex flex-col gap-2" aria-label="Footer section"><span id="footer-label" class="text-[10px] font-semibold uppercase tracking-wide text-[#1a1a1a]">FOOTER (3 BOXES)</span>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+       <div class="bg-[#ba0c2f] rounded-sm px-2 py-3 flex items-center justify-center"><span class="text-[10px] text-white">Return Policy</span>
+       </div>
+       <div class="bg-[#ba0c2f] rounded-sm px-2 py-3 flex items-center justify-center"><span class="text-[10px] text-white">Contact Us</span>
+       </div>
+       <div class="bg-[#ba0c2f] rounded-sm px-2 py-3 flex items-center justify-center"><span class="text-[10px] text-white">Terms and Agreement</span>
+       </div>
+      </div>
+     </footer>
+    </main>
+   </div>
+  </header>
+  <script>
+      // Page navigation
+      let currentPage = 'home';
+
+      function showPage(pageName) {
+        // Hide all pages
+        const pages = document.querySelectorAll('.page-content');
+        pages.forEach(function(page) {
+          page.style.display = 'none';
+        });
+        
+        // Show selected page
+        if (pageName === 'home') {
+          document.getElementById('home-page').style.display = 'block';
+          document.getElementById('page-indicator').textContent = 'Home Page';
+        } else if (pageName === 'about') {
+          document.getElementById('about-page').style.display = 'block';
+          document.getElementById('page-indicator').textContent = 'About Page';
+        } else if (pageName === 'course-materials') {
+          document.getElementById('course-materials-page').style.display = 'block';
+          document.getElementById('page-indicator').textContent = 'Course Materials Page';
+        }
+
+        currentPage = pageName;
+      }
+
+      // Minimal editable configuration
+      const defaultConfig = {
+        header_title: "HEADER",
+        nav_label: "NAVIGATION",
+        hero_label: "HERO IMAGE",
+        content_label: "CONTENT BLOCKS (3)",
+        footer_label: "FOOTER (3 BOXES)",
+        about_image_url: "https://media.istockphoto.com/id/1356940705/photo/portrait-of-a-bookseller-holding-some-books.jpg?s=612x612&w=0&k=20&c=QtCX8ItdWT01dn6prnhaLvbmwwIuqxe8QLVr2CWGiM4=",
+        course_materials_image_url: "https://media.istockphoto.com/id/1460007178/photo/library-books-on-table-and-background-for-studying-learning-and-research-in-education-school.jpg?s=612x612&w=0&k=20&c=OV_sdclWUExHy0VKPeZwyen2mO6g1NwAIBbLPT_Hd30=",
+        home_image_url: "https://media.istockphoto.com/id/1389125849/photo/bookstore-full-of-books-makes-for-better-everyday-life.jpg?s=612x612&w=0&k=20&c=DrRI2N21momwNxbkLZhl1SLVqgO5ypLCuepUPadq8LI="
+      };
+
+      function applyConfig(config) {
+        const effective = Object.assign({}, defaultConfig, config || {});
+        const baseFont = "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+
+        const titleEl = document.getElementById("wireframe-title");
+        const subtitleEl = document.getElementById("wireframe-subtitle");
+        const headerLabel = document.getElementById("header-label");
+        const navLabel = document.getElementById("nav-label");
+        const heroLabel = document.getElementById("hero-label");
+        const contentLabel = document.getElementById("content-label");
+        const footerLabel = document.getElementById("footer-label");
+
+        if (titleEl) {
+          titleEl.style.fontFamily = baseFont;
+          titleEl.style.fontSize = 16 + "px";
+        }
+        if (subtitleEl) {
+          subtitleEl.style.fontFamily = baseFont;
+          subtitleEl.style.fontSize = 11 + "px";
+        }
+
+        [headerLabel, navLabel, heroLabel, contentLabel, footerLabel].forEach(
+          function (el) {
+            if (el) {
+              el.style.fontFamily = baseFont;
+              el.style.fontSize = 10 + "px";
+            }
+          }
+        );
+
+        if (headerLabel) headerLabel.textContent = effective.header_title;
+        if (navLabel) navLabel.textContent = effective.nav_label;
+        if (heroLabel) heroLabel.textContent = effective.hero_label;
+        if (contentLabel) contentLabel.textContent = effective.content_label;
+        if (footerLabel) footerLabel.textContent = effective.footer_label;
+
+        // Handle about page image
+        const customImage = document.getElementById('custom-about-image');
+        const defaultSvg = document.getElementById('default-about-svg');
+        const imageCaption = document.getElementById('about-image-caption');
+
+        if (effective.about_image_url && effective.about_image_url.trim() !== '') {
+          customImage.src = effective.about_image_url;
+          customImage.style.display = 'block';
+          defaultSvg.style.display = 'none';
+          imageCaption.textContent = 'Our Team';
+        } else {
+          customImage.style.display = 'none';
+          defaultSvg.style.display = 'block';
+          imageCaption.textContent = 'Meet Our Friendly Team';
+        }
+
+        // Handle course materials page image
+        const courseMaterialsImage = document.getElementById('custom-course-materials-image');
+        const courseMaterialsSvg = document.getElementById('default-course-materials-svg');
+        const courseMaterialsCaption = document.getElementById('course-materials-caption');
+
+        if (effective.course_materials_image_url && effective.course_materials_image_url.trim() !== '') {
+          courseMaterialsImage.src = effective.course_materials_image_url;
+          courseMaterialsImage.style.display = 'block';
+          courseMaterialsSvg.style.display = 'none';
+          courseMaterialsCaption.textContent = 'Library Books & Study Materials';
+        } else {
+          courseMaterialsImage.style.display = 'none';
+          courseMaterialsSvg.style.display = 'block';
+          courseMaterialsCaption.textContent = 'Find Your Course Materials';
+        }
+
+        // Handle home page image
+        const homeImage = document.getElementById('custom-home-image');
+        const homeSvg = document.getElementById('default-home-svg');
+        const homeCaption = document.getElementById('home-image-caption');
+
+        if (effective.home_image_url && effective.home_image_url.trim() !== '') {
+          homeImage.src = effective.home_image_url;
+          homeImage.style.display = 'block';
+          homeSvg.style.display = 'none';
+          homeCaption.textContent = 'Welcome to Cardinal Bookstore';
+        } else {
+          homeImage.style.display = 'none';
+          homeSvg.style.display = 'block';
+          homeCaption.textContent = 'Cardinal Bookstore - Your Campus Resource';
+        }
+      }
+
+      if (window.elementSdk) {
+        window.elementSdk.init({
+          defaultConfig: defaultConfig,
+          onConfigChange: async function (config) {
+            applyConfig(config);
+          },
+          mapToCapabilities: function (config) {
+            // Ball State red as primary color for background, borders, text accents
+            const backgroundColor = {
+              get: function () {
+                return "#ba0c2f";
+              },
+              set: function () {}
+            };
+            const surfaceColor = {
+              get: function () {
+                return "#f8f3f4";
+              },
+              set: function () {}
+            };
+            const textColor = {
+              get: function () {
+                return "#4a0a15";
+              },
+              set: function () {}
+            };
+            const primaryAction = {
+              get: function () {
+                return "#ba0c2f";
+              },
+              set: function () {}
+            };
+            const secondaryAction = {
+              get: function () {
+                return "#ba0c2f";
+              },
+              set: function () {}
+            };
+
+            return {
+              recolorables: [
+                backgroundColor,
+                surfaceColor,
+                textColor,
+                primaryAction,
+                secondaryAction
+              ],
+              borderables: [],
+              fontEditable: undefined,
+              fontSizeable: undefined
+            };
+          },
+          mapToEditPanelValues: function (config) {
+            var effective = Object.assign({}, defaultConfig, config || {});
+            return new Map([
+              ["header_title", effective.header_title],
+              ["nav_label", effective.nav_label],
+              ["hero_label", effective.hero_label],
+              ["content_label", effective.content_label],
+              ["footer_label", effective.footer_label],
+              ["home_image_url", effective.home_image_url],
+              ["about_image_url", effective.about_image_url],
+              ["course_materials_image_url", effective.course_materials_image_url]
+            ]);
+          }
+        });
+
+        applyConfig(window.elementSdk.config || defaultConfig);
+      } else {
+        applyConfig(defaultConfig);
+      }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a668787a7e575e4',t:'MTc2NDQ2NTcwMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
