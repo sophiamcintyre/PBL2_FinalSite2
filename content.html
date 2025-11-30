@@ -1,0 +1,101 @@
+
+     <div id="course-materials-page" class="page-content" style="display: none;"><!-- COURSE MATERIALS HERO -->
+      <section class="w-full border border-dashed border-[#ba0c2f] rounded-md bg-white px-4 py-3 flex flex-col gap-3" aria-label="Course materials hero section"><span class="text-[10px] font-semibold uppercase tracking-wide text-[#1a1a1a]">COURSE MATERIALS HERO</span>
+       <div id="course-materials-hero-container" class="w-full border border-dashed border-[#ba0c2f] rounded-md bg-[#f8f3f4] flex flex-col items-center justify-center gap-1 py-6 relative overflow-hidden"><!-- Default Stack of Books SVG Illustration -->
+        <svg id="default-course-materials-svg" width="100%" height="180" viewbox="0 0 600 180" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full"><!-- Background shelf --> <rect x="100" y="140" width="400" height="8" fill="#8A0A22" rx="2" /> <!-- Book 1 (Standing, left) --> <rect x="150" y="60" width="60" height="80" fill="#BA0C2F" stroke="#8A0A22" stroke-width="2" rx="2" /> <rect x="155" y="65" width="50" height="70" fill="#D41E3A" rx="1" /> <text x="180" y="105" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle" transform="rotate(0 180 105)">
+          BIOLOGY
+         </text> <line x1="150" y1="60" x2="150" y2="140" stroke="#8A0A22" stroke-width="1" /> <!-- Book 2 (Standing, center-left) --> <rect x="215" y="50" width="55" height="90" fill="#1a5490" stroke="#0d3a6b" stroke-width="2" rx="2" /> <rect x="220" y="55" width="45" height="80" fill="#2563a8" rx="1" /> <text x="242" y="100" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" text-anchor="middle">
+          CALCULUS
+         </text> <line x1="215" y1="50" x2="215" y2="140" stroke="#0d3a6b" stroke-width="1" /> <!-- Book 3 (Leaning) --> <g transform="rotate(-15 310 100)">
+          <rect x="280" y="55" width="60" height="85" fill="#2d7a3e" stroke="#1a5028" stroke-width="2" rx="2" />
+          <rect x="285" y="60" width="50" height="75" fill="#3a9b52" rx="1" />
+          <text x="310" y="102" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white" text-anchor="middle">
+           CHEMISTRY
+          </text>
+         </g> <!-- Book 4 (Standing, right) --> <rect x="360" y="65" width="50" height="75" fill="#8B4513" stroke="#5d2e0d" stroke-width="2" rx="2" /> <rect x="365" y="70" width="40" height="65" fill="#a0522d" rx="1" /> <text x="385" y="107" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white" text-anchor="middle">
+          HISTORY
+         </text> <line x1="360" y1="65" x2="360" y2="140" stroke="#5d2e0d" stroke-width="1" /> <!-- Book 5 (Lying flat at bottom) --> <rect x="200" y="125" width="200" height="15" fill="#6B46C1" stroke="#4a2f87" stroke-width="2" rx="2" /> <rect x="205" y="128" width="190" height="9" fill="#7c5cdb" rx="1" /> <text x="300" y="136" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white" text-anchor="middle">
+          PSYCHOLOGY
+         </text> <!-- Decorative elements --> <circle cx="430" cy="100" r="3" fill="#BA0C2F" /> <circle cx="445" cy="110" r="2" fill="#BA0C2F" opacity="0.6" /> <circle cx="170" cy="45" r="2" fill="#BA0C2F" opacity="0.6" /> <!-- Apple on books (classic academic symbol) --> <ellipse cx="420" cy="118" rx="12" ry="11" fill="#DC143C" /> <ellipse cx="418" cy="116" rx="8" ry="7" fill="#FF6B6B" opacity="0.5" /> <rect x="419" y="108" width="2" height="10" fill="#8B4513" /> <ellipse cx="422" cy="108" rx="4" ry="2" fill="#2d7a3e" />
+        </svg><!-- Custom Image (hidden by default) --> <img id="custom-course-materials-image" alt="Course materials library books" style="display: none; width: 100%; height: 180px; object-fit: cover; border-radius: 4px;" onerror="this.style.display='none'; document.getElementById('default-course-materials-svg').style.display='block'; document.getElementById('course-materials-caption').textContent='Find Your Course Materials';"> <span id="course-materials-caption" class="text-[10px] text-[#4a4a4a] mt-2">Find Your Course Materials</span>
+       </div>
+       <div class="flex flex-col gap-1">
+        <div class="h-2 w-2/3 border border-dashed border-[#ba0c2f] rounded-sm"></div>
+        <div class="h-2 w-1/2 border border-dashed border-[#ba0c2f] rounded-sm"></div>
+       </div>
+      </section><!-- SEARCH & FILTER -->
+      <section class="w-full border border-dashed border-[#ba0c2f] rounded-md bg-white px-4 py-3 flex flex-col gap-2" aria-label="Search and filter section"><span class="text-[10px] font-semibold uppercase tracking-wide text-[#1a1a1a]">SEARCH &amp; FILTER</span>
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+        <div class="border border-dashed border-[#ba0c2f] rounded-sm px-3 py-2 bg-[#f8f3f4] flex items-center justify-center"><span class="text-[10px] text-[#4a4a4a]">Search by Course</span>
+        </div>
+        <div class="border border-dashed border-[#ba0c2f] rounded-sm px-3 py-2 bg-[#f8f3f4] flex items-center justify-center"><span class="text-[10px] text-[#4a4a4a]">Filter by Department</span>
+        </div>
+       </div>
+      </section><!-- COURSE CATEGORIES -->
+      <section class="w-full border border-dashed border-[#ba0c2f] rounded-md bg-white px-4 py-3 flex flex-col gap-3" aria-label="Course categories section">
+       <div class="flex items-center justify-between"><span class="text-[10px] font-semibold uppercase tracking-wide text-[#1a1a1a]">COURSE CATEGORIES (3)</span> <span class="text-[10px] text-[#4a4a4a]"> Textbooks / Supplies / Digital </span>
+       </div>
+       <div class="grid grid-cols-1 md:grid-cols-3 gap-3"><!-- Category 1 - Textbooks -->
+        <article class="border border-dashed border-[#ba0c2f] rounded-md px-4 py-4 flex flex-col gap-2 bg-[#f8f3f4]">
+         <div class="text-3xl mb-1">
+          📚
+         </div>
+         <h3 class="text-sm font-bold text-[#ba0c2f]">Textbooks</h3>
+         <ul class="text-xs text-[#4a4a4a] space-y-1">
+          <li>• New &amp; Used Textbooks</li>
+          <li>• Rental Options Available</li>
+          <li>• eTextbooks &amp; Digital Editions</li>
+          <li>• Textbook Buyback Program</li>
+         </ul>
+        </article><!-- Category 2 - Supplies -->
+        <article class="border border-dashed border-[#ba0c2f] rounded-md px-4 py-4 flex flex-col gap-2 bg-[#f8f3f4]">
+         <div class="text-3xl mb-1">
+          ✏️
+         </div>
+         <h3 class="text-sm font-bold text-[#ba0c2f]">Course Supplies</h3>
+         <ul class="text-xs text-[#4a4a4a] space-y-1">
+          <li>• Notebooks &amp; Binders</li>
+          <li>• Art &amp; Lab Supplies</li>
+          <li>• Calculators &amp; Tools</li>
+          <li>• Backpacks &amp; Bags</li>
+         </ul>
+        </article><!-- Category 3 - Ball State Apparel -->
+        <article class="border border-dashed border-[#ba0c2f] rounded-md px-4 py-4 flex flex-col gap-2 bg-[#f8f3f4]">
+         <div class="text-3xl mb-1">
+          👕
+         </div>
+         <h3 class="text-sm font-bold text-[#ba0c2f]">Ball State Apparel</h3>
+         <ul class="text-xs text-[#4a4a4a] space-y-1">
+          <li>• T-Shirts &amp; Hoodies</li>
+          <li>• Hats &amp; Accessories</li>
+          <li>• Cardinal Pride Gear</li>
+          <li>• Game Day Apparel</li>
+         </ul>
+        </article>
+       </div>
+      </section><!-- FEATURED MATERIALS -->
+      <section class="w-full border border-dashed border-[#ba0c2f] rounded-md bg-white px-4 py-3 flex flex-col gap-3" aria-label="Featured materials section"><span class="text-[10px] font-semibold uppercase tracking-wide text-[#1a1a1a]">FEATURED MATERIALS (4 ITEMS)</span>
+       <div class="grid grid-cols-2 md:grid-cols-4 gap-2"><!-- Textbook 1 -->
+        <article class="border border-dashed border-[#ba0c2f] rounded-sm px-2 py-3 bg-[#f8f3f4] flex flex-col items-center justify-center gap-2">
+         <div class="text-2xl">
+          📘
+         </div><span class="text-[9px] text-center text-[#1a1a1a] font-semibold">Biology 101</span> <span class="text-[8px] text-center text-[#4a4a4a]">Textbook</span>
+        </article><!-- Textbook 2 -->
+        <article class="border border-dashed border-[#ba0c2f] rounded-sm px-2 py-3 bg-[#f8f3f4] flex flex-col items-center justify-center gap-2">
+         <div class="text-2xl">
+          📗
+         </div><span class="text-[9px] text-center text-[#1a1a1a] font-semibold">Calculus II</span> <span class="text-[8px] text-center text-[#4a4a4a]">Textbook</span>
+        </article><!-- Calculator -->
+        <article class="border border-dashed border-[#ba0c2f] rounded-sm px-2 py-3 bg-[#f8f3f4] flex flex-col items-center justify-center gap-2">
+         <div class="text-2xl">
+          🔢
+         </div><span class="text-[9px] text-center text-[#1a1a1a] font-semibold">TI-84 Plus</span> <span class="text-[8px] text-center text-[#4a4a4a]">Calculator</span>
+        </article><!-- Ball State Sweatshirt -->
+        <article class="border border-dashed border-[#ba0c2f] rounded-sm px-2 py-3 bg-[#f8f3f4] flex flex-col items-center justify-center gap-2">
+         <div class="text-2xl">
+          👕
+         </div><span class="text-[9px] text-center text-[#1a1a1a] font-semibold">Cardinal Hoodie</span> <span class="text-[8px] text-center text-[#4a4a4a]">Apparel</span>
+        </article>
+       </div>
+      </section>
+     </div><!-- ========================================== --> <!-- COURSE MATERIALS PAGE CONTENT - END --> <!-- ========================================== --> <!-- ========================================== --> <!-- ABOUT PAGE CONTENT - START --> <!-- ========================================== -->
